@@ -1,5 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import styled from 'styled-components';
+
+const StyledText = styled.p `
+  color: orange;
+  font-size: 10em;
+`;
 
 function App() {
   return (
@@ -18,6 +24,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <StyledText>I'm using styled components!</StyledText>
     </div>
   );
 }
