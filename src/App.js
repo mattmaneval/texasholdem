@@ -3,10 +3,10 @@
 import GlobalStyle from './styles/GlobalStyle';
 import styled from 'styled-components';
 
-const StyledText = styled.p `
-  color: var(--orange);
+const StyledText = styled.h1 `
+  color: var(--background-alt);
   font-size: 10em;
-  font-family: var(--font);
+  font-family: var(--title);
   text-transform: uppercase;
 `;
 
