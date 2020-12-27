@@ -8,11 +8,11 @@ const GlobalStyle = createGlobalStyle`
   :root {
 
     // Color
-    --international-orange-engineering: #be0a02;
-    --black: #000000;
-    --baby-powder: #fffcf9;
+    --background: #000000;
+    --background-alt: #1c7c54;
+    --background-tert: #be0a02;
+    --foreground: #fffcf9;
     --blue-crayola: #256eff;
-    --spanish-viridian: #1c7c54;
 
     // Fonts
     --font: 'Junction Regular';
@@ -23,6 +23,3 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 export default GlobalStyle;
-
-
-\
