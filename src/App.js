@@ -1,15 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import GlobalStyle from './styles/GlobalStyle';
 import styled from 'styled-components';
 
 const StyledText = styled.p `
-  color: orange;
+  color: var(--orange);
   font-size: 10em;
 `;
 
 function App() {
   return (
     <div className="App">
+    <GlobalStyle />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
