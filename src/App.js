@@ -1,13 +1,9 @@
-// import logo from './logo.svg';
-// import './App.css';
 import GlobalStyle from './styles/GlobalStyle';
 import styled from 'styled-components';
+import Mixins from './styles/mixins';
 
-const StyledText = styled.h1 `
-  color: var(--background-alt);
-  font-size: 10em;
-  font-family: var(--title);
-  text-transform: uppercase;
+const Hero = styled.section `
+  ${Mixins};
 `;
 
 function App() {
@@ -17,7 +13,10 @@ function App() {
       <header className="App-header">
 
       </header>
-      <StyledText>I'm using styled components!</StyledText>
+      <Hero>
+        <h3>I'm using styled components!</h3>
+        <p>This is a <a href="">LINK</a></p>
+      </Hero>
     </div>
   );
 }
