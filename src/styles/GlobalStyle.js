@@ -52,6 +52,11 @@ const GlobalStyle = createGlobalStyle`
     @media only screen and (max-width: var(--small-phone)) {} /* End Small Phone */
   }
 
+  html,
+  body {
+    background-color: var(--foreground);
+  }
+
   section {
     padding: 6em 0;
     display: inline-block;
