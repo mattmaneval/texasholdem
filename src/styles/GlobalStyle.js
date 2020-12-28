@@ -9,10 +9,9 @@ const { responsive, space, color, fonts } = theme;
 
 const GlobalStyle = createGlobalStyle`
   ${Resets};
-
-  :root {
-    cursor: background-color: blue;
-  }
+  ${Fonts};
+  ${mixins};
+  ${media};
 
   html {
     box-sizing: border-box;
@@ -44,10 +43,12 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
+    display: inline-block;
     font-family: ${fonts.title};
-    font-size: 8em;
+    font-size: 6em;
+    text-transform: uppercase;
     color: ${color.foreground};
-    margin-bottom: 1rem;
+    margin-bottom: ${space.space};
 
     @media ${media.secondary} {
       font-size: 4em;
@@ -63,6 +64,7 @@ const GlobalStyle = createGlobalStyle`
 
   h3,
   h4 {
+    display: inline-block;
     color: ${color.foreground};
     margin-bottom: ${space.space};
     font-size: 2em;
