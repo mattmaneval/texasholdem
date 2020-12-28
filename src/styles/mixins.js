@@ -1,23 +1,46 @@
 import { css } from 'styled-components';
-// import { GlobalStyle } from './GlobalStyle';
+import media from './media'
+import theme from './theme';
+const { color, responsive } = theme;
 
 const mixins = {
+
+  // Wrap
   wrap: css`
     display: block;
     position: relative;
     margin-left: auto;
     margin-right: auto;
     max-width: 80em;
-    width: var(--wrap);
+    width: ${responsive.wrap};
 
-    /* Secondary Mobile - Phone & Below */
-    @media screen and (max-width: var(--phone)) {
-      width: var(--wrap-mobile);
-    } /* End Phone & Below */
+    @media ${media.secondary} {
+      width: ${responsive.wrapMobile};
+    }
   `,
-}
 
+  // Flex
+  flexCenter: css`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  `,
 
+  flexBetween: css `
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  `,
 
+  // Box Shadow
+  boxShadow: css`
+    box-shadow: 1em 1em 4em -2em ${color.foreground};
+  `,
+
+  // Animate
+  animate: css`
+    transition: 0.2s all ease-in;
+  `,
+};
 
 export default mixins;

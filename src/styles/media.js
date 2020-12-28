@@ -1,15 +1,29 @@
 const size = {
   tablet: '1024px',
-  bigphone: '840px',
+  bigPhone: '840px',
   phone: '767px',
-  smallphone: '480px'
+  smallPhone: '480px'
 }
 
 const media = {
   primary: `(max-width: ${size.tablet})`,
-  bigphone: `(max-width: ${size.bigphone})`,
+  bigPhone: `(max-width: ${size.bigPhone})`,
   secondary: `(max-width: ${size.phone})`,
-  smallphone: `(max-width: ${size.smallphone})`,
+  smallPhone: `(max-width: ${size.smallPhone})`,
 };
 
 export default media;
+
+// Media Query Manifest
+
+// Primary Mobile
+// @media ${media.primary} {} // End Primary Mobile
+
+// Big Phone
+// @media ${media.bigPhone} {} // End Big Phone
+
+// Secondary Mobile
+// @media ${media.secondary} {} // End Secondary Mobile
+
+// Small Phone
+// @media ${media.smallPhone} {} // End Small Phone

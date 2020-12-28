@@ -1,61 +1,32 @@
 import { createGlobalStyle } from 'styled-components';
 import Resets from './resets';
 import Fonts from './fonts';
-import Mixins from './mixins';
+import mixins from './mixins';
 import media from './media';
+
+import theme from './theme';
+const { responsive, space, color, fonts } = theme;
 
 const GlobalStyle = createGlobalStyle`
   ${Resets};
 
   :root {
+    cursor: background-color: blue;
+  }
 
-    /* Responsive */
-    --wrap: calc(100% - 10rem);
-    --wrap-mobile: 85%;
-    --tablet: 1024px;
-    --big-phone: 840px;
-    --phone: 767px;
-    --small-phone: 480px;
+  html {
+    box-sizing: border-box;
+  }
 
-    /* Color */
-    --background: #000000;
-    --background-alt: #1c7c54;
-    --background-tert: #be0a02;
-    --foreground: #fffcf9;
-    --callout: #256eff;
-
-    /* Fonts */
-    --font: 'Junction Regular';
-    --title: 'Cooper Hewitt Heavy';
-    --heading: 'Cooper Hewitt Bold';
-    --subheading: 'Eb Garamond Regular';
-
-    /* Space */
-    --space: 2rem;
-    --half-space: $space / 2;
-
-    /* Misc */
-    --box-shadow: 1em 1em 4em -2em var(--background);
-    --transition: 1s all ease-in;
-
-    /* Media Queries */
-
-    /* Primary Mobile - Tablet & Below */
-    @media screen and (max-width: var(--tablet)) {} /* End Tablet & Below */
-
-    /* Big Phone */
-    @media screen and (max-width: var(--big-phone)) {} /* End Big Phone */
-
-    /* Secondary Mobile - Phone & Below */
-    @media screen and (max-width: var(--phone)) {} /* End Phone & Below */
-
-    /* Small Phone */
-    @media only screen and (max-width: var(--small-phone)) {} /* End Small Phone */
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
   }
 
   html,
   body {
-    background-color: var(--foreground);
+    background-color: ${color.background};
   }
 
   section {
@@ -66,16 +37,16 @@ const GlobalStyle = createGlobalStyle`
     float: none;
     width: 100%;
 
-    /* Secondary Mobile - Phone & Below */
-    @media screen and (max-width: var(--phone)) {
+    // Secondary Mobile
+    @media ${media.secondary} {
       padding: 3em 0;
-    } /* End Phone & Below */
+    } // End Secondary Mobile
   }
 
   h1 {
-    font-family: var(--title);
+    font-family: ${fonts.title};
     font-size: 8em;
-    color: var(--background);
+    color: ${color.foreground};
     margin-bottom: 1rem;
 
     @media ${media.secondary} {
@@ -84,49 +55,45 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h2 {
-    color: var(--background);
-    font-family: var(--font);
+    color: ${color.foreground};
+    font-family: ${fonts.font};
     font-size: 2.4em;
-    margin-bottom: var(--space);
+    margin-bottom: ${space.space};
   }
 
   h3,
   h4 {
-    color: var(--background);
-    margin-bottom: var(--half-space);
+    color: ${color.foreground};
+    margin-bottom: ${space.space};
     font-size: 2em;
-    // letter-spacing: 0.26em;
     line-height: 1.4;
-    font-family: var(--subheading);
+    font-family: ${fonts.subHeading};
   }
 
   h5 {
-    font-family: var(--heading);
+    font-family: ${fonts.heading}
     font-size: 1.1rem;
     letter-spacing: .05em;
   }
 
   p {
-    font-family: var(--font);
-    color: var(--background);
+    font-family: ${fonts.font};
+    color: ${color.foreground};
     line-height: 140%;
-    margin-bottom: $space;
+    margin-bottom: ${space.space};
     font-size: 1.25em;
 
     a {
-      transition: all 0.2s ease-out;
-      color: var(--background);
+      ${mixins.animate};
+      color: ${color.foreground};
       text-decoration: none;
+      cursor: pointer;
 
       &:hover {
-        color: var(--callout);
+        color: ${color.callout};
       }
     }
   }
-
-  ${Fonts};
-  ${Mixins};
-
 `;
 
 export default GlobalStyle;
