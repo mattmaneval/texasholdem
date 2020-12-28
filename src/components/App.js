@@ -1,6 +1,7 @@
 import GlobalStyle from '../styles/GlobalStyle';
 import styled from 'styled-components';
 import mixins from '../styles/mixins';
+import media from '../styles/media';
 
 const Hero = styled.section `
   ${mixins.wrap};

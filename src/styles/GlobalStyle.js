@@ -2,6 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 import Resets from './resets';
 import Fonts from './fonts';
 import Mixins from './mixins';
+import media from './media';
 
 const GlobalStyle = createGlobalStyle`
   ${Resets};
@@ -14,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
     --tablet: 1024px;
     --big-phone: 840px;
     --phone: 767px;
-    --small-phone:480px;
+    --small-phone: 480px;
 
     /* Color */
     --background: #000000;
@@ -76,7 +77,10 @@ const GlobalStyle = createGlobalStyle`
     font-size: 8em;
     color: var(--background);
     margin-bottom: 1rem;
-    letter-spacing: -0.02EM;
+
+    @media ${media.secondary} {
+      font-size: 4em;
+    }
   }
 
   h2 {
