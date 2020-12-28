@@ -19,6 +19,7 @@ const theme = {
     backgroundTert: '#be0a02',
     foreground: '#000000',
     callout: '#256eff',
+    foregroundLite: 'rgba(1, 1, 1, 0.2)',
   },
 
   // Fonts

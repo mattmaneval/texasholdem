@@ -43,12 +43,13 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
-    display: inline-block;
     font-family: ${fonts.title};
     font-size: 6em;
     text-transform: uppercase;
     color: ${color.foreground};
     margin-bottom: ${space.space};
+    text-shadow: 0.2rem 0.2rem ${color.backgroundAlt};
+    letter-spacing: 0.2rem;
 
     @media ${media.secondary} {
       font-size: 4em;
@@ -64,7 +65,6 @@ const GlobalStyle = createGlobalStyle`
 
   h3,
   h4 {
-    display: inline-block;
     color: ${color.foreground};
     margin-bottom: ${space.space};
     font-size: 2em;
