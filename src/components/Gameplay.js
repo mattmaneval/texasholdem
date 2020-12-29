@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import mixins from '../styles/mixins';
 import HoleCards from './cards/HoleCards';
+import media from '../styles/media';
 
 import theme from '../styles/theme';
 const { space } = theme;
@@ -14,6 +15,12 @@ const GameplayGrid = styled.div `
   grid-template-columns: repeat(2, 1fr);
   grid-gap: ${space.gap};
   margin-bottom: 5rem;
+
+
+  @media ${media.bigPhone} {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
 `;
 
 const Gameplay = () => {

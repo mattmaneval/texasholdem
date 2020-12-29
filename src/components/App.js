@@ -3,6 +3,7 @@ import Hero from './Hero';
 import Overview from './Overview';
 import HandRankings from './HandRankings';
 import Gameplay from './Gameplay';
+import Winners from './Winners';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Overview />
       <HandRankings />
       <Gameplay />
+      <Winners />
     </div>
   );
 }
