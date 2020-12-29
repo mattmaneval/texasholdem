@@ -10,6 +10,7 @@ const theme = {
   space: {
     space: '2rem',
     halfSpace: '1rem',
+    gap: '3rem',
   },
 
   //Color

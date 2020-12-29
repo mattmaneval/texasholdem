@@ -5,7 +5,7 @@ import mixins from './mixins';
 import media from './media';
 
 import theme from './theme';
-const { responsive, space, color, fonts } = theme;
+const { space, color, fonts } = theme;
 
 const GlobalStyle = createGlobalStyle`
   ${Resets};
@@ -49,7 +49,8 @@ const GlobalStyle = createGlobalStyle`
     color: ${color.foreground};
     margin-bottom: ${space.space};
     text-shadow: 0.2rem 0.2rem ${color.backgroundAlt};
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.4rem;
+    line-height: 110%;
 
     @media ${media.secondary} {
       font-size: 4em;
@@ -58,7 +59,7 @@ const GlobalStyle = createGlobalStyle`
 
   h2 {
     color: ${color.foreground};
-    font-family: ${fonts.font};
+    font-family: ${fonts.heading};
     font-size: 2.4em;
     margin-bottom: ${space.space};
   }
@@ -73,16 +74,16 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h5 {
-    font-family: ${fonts.heading}
+    font-family: ${fonts.heading};
     font-size: 1.1rem;
-    letter-spacing: .05em;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
   }
 
   p {
     font-family: ${fonts.font};
     color: ${color.foreground};
     line-height: 140%;
-    margin-bottom: ${space.space};
     font-size: 1.25em;
 
     a {
@@ -95,6 +96,14 @@ const GlobalStyle = createGlobalStyle`
         color: ${color.callout};
       }
     }
+  }
+
+  .red-card {
+    color: ${color.backgroundTert};
+  }
+
+  .black-card {
+    color: ${color.foreground};
   }
 `;
 
