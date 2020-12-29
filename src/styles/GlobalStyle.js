@@ -67,7 +67,7 @@ const GlobalStyle = createGlobalStyle`
   h3,
   h4 {
     color: ${color.foreground};
-    margin-bottom: ${space.space};
+    margin-bottom: ${space.halfSpace};
     font-size: 2em;
     line-height: 1.4;
     font-family: ${fonts.subHeading};
@@ -95,6 +95,19 @@ const GlobalStyle = createGlobalStyle`
       &:hover {
         color: ${color.callout};
       }
+    }
+  }
+
+  .cards-container {
+    margin-bottom: ${space.space};
+  }
+
+  .red-card,
+  .black-card {
+    font-size: 6em;
+
+    @media ${media.secondary} {
+      font-size: 5em;
     }
   }
 

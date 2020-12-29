@@ -21,9 +21,8 @@ const SectionHandRankings = styled.section `
 
 const HandRankingsGrid = styled.div `
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: ${space.gap};
-  align-items: center;
 
   // Secondary Mobile
   @media ${media.secondary} {
@@ -43,74 +42,54 @@ const HandRankings = () => {
           <p>The ace would be considered low any time the ace begins a straight or a straight flush.</p>
         </div>
         <div>
-          <h3>Royal Flush</h3>
+          <h3>#1 Royal Flush</h3>
           <RoyalFlush />
-        </div>
-        <div>
           <p>A hand that consists of ace, king, queen, jack and 10 of the same suit.</p>
         </div>
         <div>
-          <h3>Straight Flush</h3>
+          <h3>#2 Straight Flush</h3>
           <StraightFlush />
-        </div>
-        <div>
           <p>A hand that consists of five cards of the same suit in consecutive ranking. King, queen, jack, 10 and 9 is the highest ranked straight flush and a 5, 4, 3, 2 and ace is the lowest ranked straight flush.</p>
         </div>
         <div>
-          <h3>Four of a Kind</h3>
+          <h3>#3 Four of a Kind</h3>
           <FourOfAKind />
-        </div>
-        <div>
           <p>A hand that consists of four cards of the same rank. Four aces is the highest ranked four of a kind and four 2s is the lowest ranked four of a kind.</p>
         </div>
         <div>
-          <h3>Full House</h3>
+          <h3>#4 Full House</h3>
           <FullHouse />
-        </div>
-        <div>
           <p>A hand that consists of a three of a kind and a pair. Three aces and two kings is the highest ranked full house and three 2’s and two 3’s is the lowest ranked full house</p>
         </div>
         <div>
-          <h3>Flush</h3>
+          <h3>#5 Flush</h3>
           <Flush />
-        </div>
-        <div>
           <p>A hand that consists of five cards of the same suit, but not in consecutive ranking. An ace, king, queen, jack and 9 is the highest ranked flush and a 7, 5, 4, 3 and 2 is the lowest ranked flush.</p>
         </div>
         <div>
-          <h3>Straight</h3>
+          <h3>#6 Straight</h3>
           <Straight />
-        </div>
-        <div>
           <p>A hand that consists of five cards that are in consecutive ranking, but that are not the same suit. An ace, king, queen, jack and 10 is the highest ranked straight and a 5, 4, 3, 2 and ace is the lowest ranked straight.</p>
         </div>
         <div>
-          <h3>Three of a Kind</h3>
+          <h3>#7 Three of a Kind</h3>
           <ThreeOfAKind />
-        </div>
-        <div>
           <p>A hand that consists of three cards of the same rank. Three aces is the highest ranked three of a kind and three 2’s is the lowest ranked three of a kind.</p>
         </div>
         <div>
-          <h3>Two Pairs</h3>
+          <h3>#8 Two Pairs</h3>
           <TwoPairs />
-        </div>
-        <div>
           <p>A hand that consists of two pairs. Two aces and two kings is the highest ranked two pairs and two 3’s and two 2’s is the lowest ranked two pairs.</p>
         </div>
         <div>
-          <h3>One Pair</h3>
+          <h3>#9 One Pair</h3>
           <OnePair />
-        </div>
-        <div>
           <p>A hand that consists of two cards of the same rank. Two aces is the highest ranked pair and two 2’s is the lowest ranked pair</p>
         </div>
         <div>
-        <h3>High Card</h3>
+        <h3>#10 High Card</h3>
         <HighCard />
-        </div>
-        <div>
-          <p>A hand that consists of five cards that do not make any of the hands listed above. An ace, king, queen, jack and 9 is the highest ranked high card hand and 7, 5, 4, 3 and 2 the lowest ranked high card hand.</p>
+        <p>A hand that consists of five cards that do not make any of the hands listed above. An ace, king, queen, jack and 9 is the highest ranked high card hand and 7, 5, 4, 3 and 2 the lowest ranked high card hand.</p>
         </div>
       </HandRankingsGrid>
     </SectionHandRankings>
