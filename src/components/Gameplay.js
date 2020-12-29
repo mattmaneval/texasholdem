@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import mixins from '../styles/mixins';
 import HoleCards from './cards/HoleCards';
 import media from '../styles/media';
+import Winners from './Winners';
 
 import theme from '../styles/theme';
 const { space } = theme;
@@ -128,12 +129,6 @@ const Gameplay = () => {
       <GameplayGrid>
         <p className="instruction">The house dealer shall then take the top card of the deck and place it in the discard pile without exposing it.</p>
       </GameplayGrid>
-      <h3></h3>
-      <GameplayGrid>
-        <p className="instruction"></p>
-        <p className="instruction-detail"></p>
-        <p className="instruction-detail"></p>
-      </GameplayGrid>
       <h3>The "River" Card</h3>
       <GameplayGrid>
         <p className="instruction">The house dealer shall then take one card from the top of the deck and place it face-up on the table so there are now a total of five community cards face-up on the table.</p>
@@ -161,6 +156,7 @@ const Gameplay = () => {
       <GameplayGrid>
         <p className="instruction">All active players shall then enter into a showdown with each other and compare their hands.</p>
       </GameplayGrid>
+      <Winners />
     </SectionGameplay>
   );
 }
