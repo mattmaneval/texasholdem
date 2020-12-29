@@ -118,6 +118,14 @@ const GlobalStyle = createGlobalStyle`
   .black-card {
     color: ${color.foreground};
   }
+
+  .instruction {
+    grid-column: 1/-1;
+  }
+
+  .instruction-detaiL {
+
+  }
 `;
 
 export default GlobalStyle;
