@@ -1,7 +1,12 @@
 import styled from 'styled-components';
+import media from '../../styles/media';
 
 const Cards = styled.div `
   font-size: 10em;
+
+  @media ${media.secondary} {
+    font-size: 5em;
+  }
 `;
 
 const HoleCards = () => {

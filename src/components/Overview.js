@@ -33,11 +33,11 @@ const Overview = () => {
           <p> Each player may use any combination of the two cards initially dealt to them at the beginning of the game, referred to as "hole" cards, and the five cards dealt on the table throught the course of the game, referred to as "community" cards.</p>
         </div>
         <div>
-          <h5>2 Hole Cards</h5>
+          <h3>2 Hole Cards</h3>
           <HoleCards />
         </div>
         <div>
-          <h5>5 Community Cards</h5>
+          <h3>5 Community Cards</h3>
           <CommunityCards />
         </div>
         <div>

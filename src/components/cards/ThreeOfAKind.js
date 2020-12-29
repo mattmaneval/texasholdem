@@ -9,16 +9,16 @@ const Cards = styled.div `
   }
 `;
 
-const CommunityCards = () => {
+const ThreeOfAKind = () => {
   return(
     <Cards>
+      <span className="black-card">&#127149;</span>
+      <span className="red-card">&#127165;</span>
       <span className="red-card">&#127181;</span>
-      <span className="black-card">&#127141;</span>
-      <span className="red-card">&#127153;</span>
-      <span className="red-card">&#127173;</span>
-      <span className="black-card">&#127145;</span>
+      <span className="black-card">&#127144;</span>
+      <span className="black-card">&#127140;</span>
     </Cards>
   );
 }
 
-export default CommunityCards;
+export default ThreeOfAKind;
