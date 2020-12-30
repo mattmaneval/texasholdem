@@ -99,15 +99,15 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .cards-container {
-    // margin-bottom: ${space.space};
+    margin-bottom: ${space.space};
   }
 
   .red-card,
   .black-card {
-    // font-size: 6em;
+    font-size: 6em;
 
     @media ${media.secondary} {
-      // font-size: 35em;
+      font-size: 5em;
     }
   }
 

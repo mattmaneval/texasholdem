@@ -11,9 +11,10 @@ function App() {
       <GlobalStyle />
       <Hero />
       <Overview />
+      <TableLayout />
       <HandRankings />
       <Gameplay />
-      <TableLayout />
+
     </div>
   );
 }
