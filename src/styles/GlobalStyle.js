@@ -48,20 +48,32 @@ const GlobalStyle = createGlobalStyle`
     text-transform: uppercase;
     color: ${color.foreground};
     margin-bottom: ${space.space};
-    text-shadow: 0.2rem 0.2rem ${color.backgroundAlt};
+    text-shadow: 0.3rem 0.3rem ${color.backgroundAlt};
     letter-spacing: 0.4rem;
     line-height: 110%;
 
-    @media ${media.secondary} {
+    @media ${media.primary} {
       font-size: 4em;
+      text-shadow: 0.25rem 0.25rem ${color.backgroundAlt};
+    }
+
+    @media ${media.secondary} {
+      font-size: 3em;
+      text-shadow: 0.2rem 0.2rem ${color.backgroundAlt};
     }
   }
 
   h2 {
     color: ${color.foreground};
-    font-family: ${fonts.heading};
+    font-family: ${fonts.title};
     font-size: 2.4em;
     margin-bottom: ${space.space};
+    text-transform: uppercase;
+    text-shadow: 0.1rem 0.1rem ${color.backgroundAlt};
+
+    @media ${media.secondary} {
+      font-size: 2.25em;
+    }
   }
 
   h3,
@@ -70,7 +82,11 @@ const GlobalStyle = createGlobalStyle`
     margin-bottom: ${space.halfSpace};
     font-size: 2em;
     line-height: 1.4;
-    font-family: ${fonts.subHeading};
+    font-family: ${fonts.heading};
+
+    @media ${media.secondary} {
+      font-size: 1.6em;
+    }
   }
 
   h5 {
@@ -121,6 +137,10 @@ const GlobalStyle = createGlobalStyle`
 
   .instruction {
     grid-column: 1/-1;
+    font-size: 1.75em;
+    font-family: 'EB Garamond Regular';
+    line-height: 1.1;
+}
   }
 
   .instruction-detaiL {

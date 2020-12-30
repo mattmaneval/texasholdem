@@ -4,8 +4,8 @@ import media from '../styles/media';
 import theme from '../styles/theme';
 const { color, fonts } = theme;
 
-const SectionTableLayout = styled.section `
-  ${mixins.wrap};
+const TableLayoutContainer = styled.div `
+  padding: 3em 0;
 `;
 
 const TableGrid = styled.div `
@@ -133,7 +133,7 @@ const BigBlind = styled.div `
 `;
 
 const card = css `
-  font-size: 1.65em;
+  font-size: 2.65em;
   color: ${color.background};
   padding: 0.25rem;
 
@@ -254,8 +254,7 @@ const TableCard20 = styled.span `
 
 const TableLayout = () => {
   return(
-    <SectionTableLayout>
-    <h2>Table Layout</h2>
+    <TableLayoutContainer>
       <TableGrid>
         <Player1>
           <TableCard1>&#127136;</TableCard1>
@@ -301,7 +300,7 @@ const TableLayout = () => {
         <SmallBlind>Small Blind<br />&#10061;</SmallBlind>
         <BigBlind>Big Blind<br />&#10061; &#10061;</BigBlind>
       </TableGrid>
-    </SectionTableLayout>
+    </TableLayoutContainer>
   );
 }
 

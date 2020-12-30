@@ -13,9 +13,9 @@ const Winners = () => {
   return(
     <WinnersGrid>
       <h2>How winners are determined and paid</h2>
-      <p>The pot shall be awarded to the player with the highest ranking five-card poker hand, according to the hand and card rankings shown above. All other players shall lose.</p>
-      <p>In the event that more than one player has the highest ranked hand, the pot shall be split equally among all players with the winning hand.</p>
-      <p>In the instance that there are an odd number of chips, the odd chips shall be awarded to the player closest to the left of the dealer button.</p>
+      <p className="instruction">The pot shall be awarded to the player with the highest ranking five-card poker hand, according to the hand and card rankings shown above. All other players shall lose.</p>
+      <p className="instruction">In the event that more than one player has the highest ranked hand, the pot shall be split equally among all players with the winning hand.</p>
+      <p className="instruction">In the instance that there are an odd number of chips, the odd chips shall be awarded to the player closest to the left of the dealer button.</p>
     </WinnersGrid>
   );
 }

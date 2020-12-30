@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import mixins from '../styles/mixins';
+import TableLayout from './TableLayout';
 import HoleCards from './cards/HoleCards';
 import media from '../styles/media';
 import Winners from './Winners';
@@ -28,6 +29,7 @@ const Gameplay = () => {
   return(
     <SectionGameplay>
       <h2>Gameplay</h2>
+      <TableLayout />
       <h3>The Dealer Button</h3>
       <GameplayGrid>
         <p className="instruction">The game shall utilize a flat white disk with the words “dealer button” on it to visually designate which player is in the dealer position (in theory) for that hand.</p>
@@ -69,7 +71,7 @@ const Gameplay = () => {
       </GameplayGrid>
       <h3>The Pot</h3>
       <GameplayGrid>
-        <p className="instruction">7. After all players have acted in turn and either called all wagers, raised or folded their hand, the house dealer shall move all player wagers into the pot.</p>
+        <p className="instruction">After all players have acted in turn and either called all wagers, raised or folded their hand, the house dealer shall move all player wagers into the pot.</p>
       </GameplayGrid>
       <h3>The Burn Card</h3>
       <GameplayGrid>
@@ -96,21 +98,21 @@ const Gameplay = () => {
       </GameplayGrid>
       <h3>The Pot</h3>
       <GameplayGrid>
-        <p className="instruction">12. After all players have acted in turn and either called all wagers, raised or folded their hand, the house dealer shall move all player wagers into the pot.</p>
+        <p className="instruction">After all players have acted in turn and either called all wagers, raised or folded their hand, the house dealer shall move all player wagers into the pot.</p>
       </GameplayGrid>
       <h3>Another Burn Card</h3>
       <GameplayGrid>
-        <p className="instruction">13. The house dealer shall then take the top card of the deck and place it in the discard pilewithout exposing it.</p>
+        <p className="instruction">The house dealer shall then take the top card of the deck and place it in the discard pilewithout exposing it.</p>
       </GameplayGrid>
       <h3>The "Turn" Card</h3>
       <GameplayGrid>
-        <p className="instruction">14. The house dealer shall then take one card from the top of the deck and place it face-upon the table so that there are now a total of four community cards face-up on the table.</p>
+        <p className="instruction">The house dealer shall then take one card from the top of the deck and place it face-upon the table so that there are now a total of four community cards face-up on the table.</p>
         <p className="instruction-detail">a. This is referred to as “the turn card.”</p>
         <p className="instruction-detail">b. This card shall also become a community card and is shared by all players.</p>
       </GameplayGrid>
       <h3>Third Round of wagering</h3>
       <GameplayGrid>
-        <p className="instruction">15. Once the fourth community card has been placed face-up on the table, the third round of wagering will occur.</p>
+        <p className="instruction">Once the fourth community card has been placed face-up on the table, the third round of wagering will occur.</p>
       </GameplayGrid>
       <h3>Actions</h3>
       <GameplayGrid>
@@ -150,7 +152,7 @@ const Gameplay = () => {
       </GameplayGrid>
       <h3>The Pot</h3>
       <GameplayGrid>
-        <p className="instruction">22. After the fourth and final round of wagering has been completed, the house dealer shall move all wagers into the pot.</p>
+        <p className="instruction">After the fourth and final round of wagering has been completed, the house dealer shall move all wagers into the pot.</p>
       </GameplayGrid>
       <h3>The Showdown</h3>
       <GameplayGrid>
