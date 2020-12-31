@@ -136,7 +136,7 @@ const Card = styled.span `
   color: ${color.background};
   padding: 0.25rem;
   position: ${props => props.absolute ? "absolute" : "relative"};
-  ${props => props.rotate ? "transform: rotate(20deg);" : null };
+  ${props => props.transform ? "transform: rotate(20deg);" : null };
   ${props => props.leftNegative ? "left: -0.3em" : null };
   ${props => props.left ? "left: 0.3em" : null };
 
@@ -150,52 +150,52 @@ const TableLayout = () => {
     <TableLayoutContainer>
       <TableGrid>
         <Player1>
-          <Card rotate absolute left>&#127136;</Card>
+          <Card transform absolute left>&#127136;</Card>
           <Card>&#127136;</Card>
         </Player1>
 
         <Player2>
-          <Card rotate absolute left>&#127136;</Card>
+          <Card transform absolute left>&#127136;</Card>
           <Card>&#127136;</Card>
         </Player2>
 
         <Player3>
-          <Card rotate absolute left>&#127136;</Card>
+          <Card transform absolute left>&#127136;</Card>
           <Card>&#127136;</Card>
         </Player3>
 
         <Player4>
-          <Card rotate absolute left>&#127136;</Card>
+          <Card transform absolute left>&#127136;</Card>
           <Card>&#127136;</Card>
         </Player4>
 
         <Player5>
-          <Card rotate absolute left>&#127136;</Card>
+          <Card transform absolute left>&#127136;</Card>
           <Card>&#127136;</Card>
         </Player5>
 
         <Player6>
-          <Card rotate absolute leftNegative>&#127136;</Card>
+          <Card transform absolute leftNegative>&#127136;</Card>
           <Card>&#127136;</Card>
         </Player6>
 
         <Player7>
-          <Card rotate absolute leftNegative>&#127136;</Card>
+          <Card transform absolute leftNegative>&#127136;</Card>
           <Card>&#127136;</Card>
         </Player7>
 
         <Player8>
-          <Card rotate absolute leftNegative>&#127136;</Card>
+          <Card transform absolute leftNegative>&#127136;</Card>
           <Card>&#127136;</Card>
         </Player8>
 
         <Player9>
-          <Card rotate absolute leftNegative>&#127136;</Card>
+          <Card transform absolute leftNegative>&#127136;</Card>
           <Card>&#127136;</Card>
         </Player9>
 
         <Player10>
-          <Card rotate absolute leftNegative>&#127136;</Card>
+          <Card transform absolute leftNegative>&#127136;</Card>
           <Card>&#127136;</Card>
         </Player10>
 
