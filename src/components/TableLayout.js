@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import mixins from '../styles/mixins';
 import media from '../styles/media';
 import theme from '../styles/theme';
 const { color, fonts } = theme;
@@ -132,124 +131,18 @@ const BigBlind = styled.div `
   }
 `;
 
-const card = css `
+const Card = styled.span `
   font-size: 2.65em;
   color: ${color.background};
   padding: 0.25rem;
+  position: ${props => props.absolute ? "absolute" : "relative"};
+  ${props => props.rotate ? "transform: rotate(20deg);" : null };
+  ${props => props.leftNegative ? "left: -0.3em" : null };
+  ${props => props.left ? "left: 0.3em" : null };
 
   @media ${media.secondary} {
     font-size: 1.25em;
   }
-`;
-
-const TableCard1 = styled.span `
-  ${card}
-  position: absolute;
-  left: 0.3em;
-  transform: rotate(20deg);
-`;
-
-const TableCard2 = styled.span `
-  ${card}
-`;
-
-const TableCard3 = styled.span `
-  ${card}
-  position: absolute;
-  left: 0.3em;
-  transform: rotate(20deg);
-`;
-
-const TableCard4= styled.span `
-  ${card}
-`;
-
-const TableCard5 = styled.span `
-  ${card}
-  position: absolute;
-  left: 0.3em;
-  transform: rotate(20deg);
-`;
-
-const TableCard6 = styled.span `
-  ${card}
-`;
-
-const TableCard7 = styled.span `
-  ${card}
-  position: absolute;
-  left: 0.3em;
-  transform: rotate(20deg);
-`;
-
-const TableCard8 = styled.span `
-  ${card}
-`;
-
-const TableCard9 = styled.span `
-  ${card}
-  position: absolute;
-  left: 0.3em;
-  transform: rotate(20deg);
-`;
-
-const TableCard10 = styled.span `
-  ${card}
-`;
-
-const TableCard11 = styled.span `
-  ${card}
-  position: absolute;
-  left: -0.3em;
-  transform: rotate(20deg);
-`;
-
-const TableCard12 = styled.span `
-  ${card}
-`;
-
-const TableCard13 = styled.span `
-  ${card}
-  position: absolute;
-  left: -0.3em;
-  transform: rotate(20deg);
-`;
-
-const TableCard14 = styled.span `
-  ${card}
-`;
-
-const TableCard15 = styled.span `
-  ${card}
-  position: absolute;
-  left: -0.3em;
-  transform: rotate(20deg);
-`;
-
-const TableCard16 = styled.span `
-  ${card}
-`;
-
-const TableCard17 = styled.span `
-  ${card}
-  position: absolute;
-  left: -0.3em;
-  transform: rotate(20deg);
-`;
-
-const TableCard18 = styled.span `
-  ${card}
-`;
-
-const TableCard19 = styled.span `
-  ${card}
-  position: absolute;
-  left: -0.3em;
-  transform: rotate(20deg);
-`;
-
-const TableCard20 = styled.span `
-  ${card}
 `;
 
 const TableLayout = () => {
@@ -257,45 +150,55 @@ const TableLayout = () => {
     <TableLayoutContainer>
       <TableGrid>
         <Player1>
-          <TableCard1>&#127136;</TableCard1>
-          <TableCard2>&#127136;</TableCard2>
+          <Card rotate absolute left>&#127136;</Card>
+          <Card>&#127136;</Card>
         </Player1>
+
         <Player2>
-          <TableCard3>&#127136;</TableCard3>
-          <TableCard4>&#127136;</TableCard4>
+          <Card rotate absolute left>&#127136;</Card>
+          <Card>&#127136;</Card>
         </Player2>
+
         <Player3>
-          <TableCard5>&#127136;</TableCard5>
-          <TableCard6>&#127136;</TableCard6>
+          <Card rotate absolute left>&#127136;</Card>
+          <Card>&#127136;</Card>
         </Player3>
+
         <Player4>
-          <TableCard7>&#127136;</TableCard7>
-          <TableCard8>&#127136;</TableCard8>
+          <Card rotate absolute left>&#127136;</Card>
+          <Card>&#127136;</Card>
         </Player4>
+
         <Player5>
-          <TableCard9>&#127136;</TableCard9>
-          <TableCard10>&#127136;</TableCard10>
+          <Card rotate absolute left>&#127136;</Card>
+          <Card>&#127136;</Card>
         </Player5>
+
         <Player6>
-          <TableCard11>&#127136;</TableCard11>
-          <TableCard12>&#127136;</TableCard12>
+          <Card rotate absolute leftNegative>&#127136;</Card>
+          <Card>&#127136;</Card>
         </Player6>
+
         <Player7>
-          <TableCard13>&#127136;</TableCard13>
-          <TableCard14>&#127136;</TableCard14>
+          <Card rotate absolute leftNegative>&#127136;</Card>
+          <Card>&#127136;</Card>
         </Player7>
+
         <Player8>
-          <TableCard15>&#127136;</TableCard15>
-          <TableCard16>&#127136;</TableCard16>
+          <Card rotate absolute leftNegative>&#127136;</Card>
+          <Card>&#127136;</Card>
         </Player8>
+
         <Player9>
-          <TableCard17>&#127136;</TableCard17>
-          <TableCard18>&#127136;</TableCard18>
+          <Card rotate absolute leftNegative>&#127136;</Card>
+          <Card>&#127136;</Card>
         </Player9>
+
         <Player10>
-          <TableCard19>&#127136;</TableCard19>
-          <TableCard20>&#127136;</TableCard20>
+          <Card rotate absolute leftNegative>&#127136;</Card>
+          <Card>&#127136;</Card>
         </Player10>
+
         <DealerButton>Dealer Button<br />&#9898;</DealerButton>
         <SmallBlind>Small Blind<br />&#10061;</SmallBlind>
         <BigBlind>Big Blind<br />&#10061; &#10061;</BigBlind>
