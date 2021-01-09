@@ -98,7 +98,7 @@ const DealerButton = styled.div `
   color: ${color.background};
   text-align: center;
   line-height: 2em;
-  font-family: ${fonts.font};
+  font-family: ${fonts.heading};
 
   @media ${media.secondary} {
     font-size: 0.6em;
@@ -111,7 +111,7 @@ const SmallBlind = styled.div `
   color: ${color.background};
   text-align: center;
   line-height: 2em;
-  font-family: ${fonts.font};
+  font-family: ${fonts.heading};
 
   @media ${media.secondary} {
     font-size: 0.6em;
@@ -124,7 +124,7 @@ const BigBlind = styled.div `
   color: ${color.background};
   text-align: center;
   line-height: 2em;
-  font-family: ${fonts.font};
+  font-family: ${fonts.heading};
 
   @media ${media.secondary} {
     font-size: 0.6em;

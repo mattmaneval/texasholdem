@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import mixins from '../styles/mixins';
 import TableLayout from './TableLayout';
-import HoleCards from './cards/HoleCards';
 import media from '../styles/media';
 import Winners from './Winners';
 
@@ -58,7 +57,6 @@ const Gameplay = () => {
       <GameplayGrid>
         <p className="instruction">Once the blinds have been placed in the pot, the house dealer shall deal one card facedown to each player, starting with the player to the left of the dealer button, the player that received the small blind button, and continuing clockwise around the table until all players have two cards face-down.</p>
         <p className="instruction-detail">a. These initial two cards are referred to as “hole cards.”</p>
-        <HoleCards />
       </GameplayGrid>
       <h3>Wagering</h3>
       <GameplayGrid>
