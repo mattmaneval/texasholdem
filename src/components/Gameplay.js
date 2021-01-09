@@ -14,7 +14,7 @@ const SectionGameplay = styled.section `
 
 const GameplayGrid = styled.div `
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: repeat(2, 1fr); */
   grid-gap: ${space.gap};
   margin-bottom: 5rem;
 

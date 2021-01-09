@@ -136,15 +136,10 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .instruction {
-    grid-column: 1/-1;
-    font-size: 1.75em;
+    // grid-column: 1/-1;
+    font-size: 1.45em;
     font-family: 'EB Garamond Regular';
     line-height: 1.1;
-}
-  }
-
-  .instruction-detaiL {
-
   }
 `;
 
