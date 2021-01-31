@@ -12,7 +12,7 @@ function App() {
       <Hero />
       <Overview />
       <HandRankings />
-      <Gameplay instructions={instructions}/>
+      <Gameplay instructions={instructions} />
     </div>
   );
 }

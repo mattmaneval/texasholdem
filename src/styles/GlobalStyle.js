@@ -141,6 +141,10 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'EB Garamond Regular';
     line-height: 1.1;
   }
+
+  .collapsed {
+    display: none;
+  }
 `;
 
 export default GlobalStyle;

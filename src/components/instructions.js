@@ -159,7 +159,11 @@ const instructions = [
   {
     instruction: 'The Showdown',
     desc: 'All active players shall then enter into a showdown with each other and compare their hands.',
-    detail:  {}
+    detail:  {
+      a: 'The pot shall be awarded to the player with the highest ranking five-card poker hand, according to the hand and card rankings shown above. All other players shall lose.',
+      b: 'In the event that more than one player has the highest ranked hand, the pot shall be split equally among all players with the winning hand.',
+      c: 'In the instance that there are an odd number of chips, the odd chips shall be awarded to the player closest to the left of the dealer button.'
+    }
   },
 ]
 
