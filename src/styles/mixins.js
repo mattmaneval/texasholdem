@@ -11,7 +11,7 @@ const mixins = {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    max-width: 80em;
+    max-width: 60em;
     width: ${responsive.wrap};
 
     @media ${media.secondary} {

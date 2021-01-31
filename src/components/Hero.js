@@ -29,6 +29,7 @@ const Suits = styled.div `
 
 const HeroText = styled.p `
   max-width: 35em;
+  color: ${color.foreground};
 `;
 
 const RedAmps = styled.span `

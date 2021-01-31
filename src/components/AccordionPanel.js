@@ -5,22 +5,20 @@ import CirclePlus from './svgs/CirclePlus';
 import CircleMinus from './svgs/CircleMinus';
 import media from '../styles/media';
 import theme from '../styles/theme';
+
 const { space, color, fonts } = theme;
 
 const AccordionPanel = styled.div `
-  /* background-color: ${color.callout}; */
   padding: ${space.space};
-  margin-bottom: ${space.halfSpace};
-  border-radius: 0.3em;
-  border: 1px solid ${color.foreground};
+  border-bottom: 2px solid ${color.foregroundLite};
 `;
 
 const AccordionPanelHead = styled.div`
   ${mixins.flexBetween};
   color: ${color.foreground};
-  font-size: 2em;
+  font-size: 1.65em;
   line-height: 1.4;
-  font-family: ${fonts.subHeading};
+  font-family: ${fonts.heading};
 
   @media ${media.secondary} {
     font-size: 1.6em;
@@ -31,6 +29,7 @@ const AccordionPanelButton = styled.button`
   background: none;
   border: none;
   -webkit-appearance: none;
+  padding: ${space.halfSpace};
 
   svg {
     height: 1.85rem;
@@ -41,13 +40,12 @@ const AccordionPanelButton = styled.button`
 `;
 
 const AccordionPanelContent = styled.div`
-  display: grid;
-  grid-gap: ${space.gap};
-  margin-bottom: 5rem;
+  p {
+    margin-bottom: ${space.halfSpace};
 
-  @media ${media.bigPhone} {
-    grid-template-columns: 1fr;
-    grid-gap: 2rem;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 `;
 
@@ -57,18 +55,16 @@ class GameplayInstruction extends React.Component {
     this.state = {
       collapsed: true
     };
-
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick = () =>{
     this.setState(prevState => ({
       collapsed: !prevState.collapsed
-    }))
+    }));
   }
 
   render () {
-
     const { instruction, desc } = this.props.steps;
     const detailA = this.props.steps.detail.a;
     const detailB = this.props.steps.detail.b;
@@ -94,10 +90,8 @@ class GameplayInstruction extends React.Component {
           {detailE ? <p>e. {detailE}</p> : null}
         </AccordionPanelContent>
       </AccordionPanel>
-
     );
   }
-
 }
 
 export default GameplayInstruction;

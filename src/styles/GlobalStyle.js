@@ -3,8 +3,8 @@ import Resets from './resets';
 import Fonts from './fonts';
 import mixins from './mixins';
 import media from './media';
-
 import theme from './theme';
+
 const { space, color, fonts } = theme;
 
 const GlobalStyle = createGlobalStyle`
@@ -36,10 +36,9 @@ const GlobalStyle = createGlobalStyle`
     float: none;
     width: 100%;
 
-    // Secondary Mobile
     @media ${media.secondary} {
       padding: 3em 0;
-    } // End Secondary Mobile
+    }
   }
 
   h1 {
@@ -64,9 +63,10 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h2 {
+    display: inline-block;
     color: ${color.foreground};
     font-family: ${fonts.title};
-    font-size: 2.4em;
+    font-size: 1.65em;
     margin-bottom: ${space.space};
     text-transform: uppercase;
     text-shadow: 0.1rem 0.1rem ${color.backgroundAlt};
@@ -80,9 +80,9 @@ const GlobalStyle = createGlobalStyle`
   h4 {
     color: ${color.foreground};
     margin-bottom: ${space.halfSpace};
-    font-size: 2em;
+    font-size: 1.5em;
     line-height: 1.4;
-    font-family: ${fonts.heading};
+    font-family: ${fonts.subHeading};
 
     @media ${media.secondary} {
       font-size: 1.6em;
@@ -120,7 +120,7 @@ const GlobalStyle = createGlobalStyle`
 
   .red-card,
   .black-card {
-    font-size: 6em;
+    font-size: 12em;
 
     @media ${media.secondary} {
       font-size: 5em;
@@ -133,13 +133,6 @@ const GlobalStyle = createGlobalStyle`
 
   .black-card {
     color: ${color.foreground};
-  }
-
-  .instruction {
-    // grid-column: 1/-1;
-    font-size: 1.45em;
-    font-family: 'EB Garamond Regular';
-    line-height: 1.1;
   }
 
   .collapsed {

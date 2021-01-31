@@ -17,13 +17,13 @@ export default media;
 // Media Query Manifest
 
 // Primary Mobile
-// @media ${media.primary} {} // End Primary Mobile
+// @media ${media.primary} {}
 
 // Big Phone
-// @media ${media.bigPhone} {} // End Big Phone
+// @media ${media.bigPhone} {}
 
 // Secondary Mobile
-// @media ${media.secondary} {} // End Secondary Mobile
+// @media ${media.secondary} {}
 
 // Small Phone
-// @media ${media.smallPhone} {} // End Small Phone
+// @media ${media.smallPhone} {}

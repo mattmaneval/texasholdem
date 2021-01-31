@@ -2,7 +2,7 @@ import GlobalStyle from '../styles/GlobalStyle';
 import Hero from './Hero';
 import Overview from './Overview';
 import HandRankings from './HandRankings';
-import Gameplay from './Gameplay';
+import Accordion from './Accordion';
 import instructions from './instructions';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
       <Hero />
       <Overview />
       <HandRankings />
-      <Gameplay instructions={instructions} />
+      <Accordion instructions={instructions} />
     </div>
   );
 }

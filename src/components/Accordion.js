@@ -4,20 +4,20 @@ import mixins from '../styles/mixins';
 import TableLayout from './TableLayout';
 import GameplayInstruction from './AccordionPanel';
 
-const Accordion = styled.section `
+const AccordionContainer = styled.section `
   ${mixins.wrap};
 `;
 
-const Gameplay = props => {
+const Accordion = props => {
   return (
-    <Accordion>
+    <AccordionContainer>
       <h2>Gameplay</h2>
       <TableLayout />
       {props.instructions.map((data, key) =>
         <GameplayInstruction steps={props.instructions[key]} />
       )}
-    </Accordion>
+    </AccordionContainer>
   );
 }
 
-export default Gameplay;
+export default Accordion;
