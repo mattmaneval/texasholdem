@@ -13,7 +13,7 @@ const theme = {
     gap: '2rem',
   },
 
-  //Color
+  // Color
   color: {
     background: '#fffcf9',
     backgroundAlt: '#1c7c54',
@@ -30,6 +30,6 @@ const theme = {
     heading: 'Cooper Hewitt Bold',
     subHeading: 'Eb Garamond Regular',
   },
-}
+};
 
 export default theme;

@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import mixins from '../styles/mixins';
 import CirclePlus from './svgs/CirclePlus';
 import CircleMinus from './svgs/CircleMinus';
@@ -8,7 +9,7 @@ import theme from '../styles/theme';
 
 const { space, color, fonts } = theme;
 
-const AccordionPanel = styled.div `
+const AccordionPanel = styled.div`
   padding: ${space.space};
   border-bottom: 2px solid ${color.foregroundLite};
 `;
@@ -49,49 +50,68 @@ const AccordionPanelContent = styled.div`
   }
 `;
 
-class GameplayInstruction extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      collapsed: true
-    };
-    this.handleClick = this.handleClick.bind(this);
-  }
+function GameplayInstruction({ steps }) {
+  const [collapsed, expanded] = useState(true);
 
-  handleClick = () =>{
-    this.setState(prevState => ({
-      collapsed: !prevState.collapsed
-    }));
-  }
+  const handleClick = () => (collapsed ? expanded(false) : expanded(true));
 
-  render () {
-    const { instruction, desc } = this.props.steps;
-    const detailA = this.props.steps.detail.a;
-    const detailB = this.props.steps.detail.b;
-    const detailC = this.props.steps.detail.c;
-    const detailD = this.props.steps.detail.d;
-    const detailE = this.props.steps.detail.e;
+  const {
+    instruction, desc, detailA, detailB, detailC, detailD, detailE,
+  } = steps;
 
-    return (
-      <AccordionPanel>
-        <AccordionPanelHead>
-          {instruction}
-          <AccordionPanelButton onClick={this.handleClick}>
-            <CirclePlus  collapsed={this.state.collapsed}/>
-            <CircleMinus collapsed={this.state.collapsed} />
-          </AccordionPanelButton>
-        </AccordionPanelHead>
-        <AccordionPanelContent className={this.state.collapsed ? 'collapsed' : 'expanded'}>
-          <p>{desc}</p>
-          {detailA ? <p>a. {detailA}</p> : null}
-          {detailB ? <p>b. {detailB}</p> : null}
-          {detailC ? <p>c. {detailC}</p> : null}
-          {detailD ? <p>d. {detailD}</p> : null}
-          {detailE ? <p>e. {detailE}</p> : null}
-        </AccordionPanelContent>
-      </AccordionPanel>
-    );
-  }
+  return (
+    <AccordionPanel>
+      <AccordionPanelHead>
+        {instruction}
+        <AccordionPanelButton onClick={handleClick}>
+          <CirclePlus collapsed={collapsed} />
+          <CircleMinus collapsed={collapsed} />
+        </AccordionPanelButton>
+      </AccordionPanelHead>
+      <AccordionPanelContent className={collapsed ? 'collapsed' : 'expanded'}>
+        <p>{desc}</p>
+        {detailA
+          ? (
+            <p>
+              a.
+              {detailA}
+            </p>
+          ) : null}
+        {detailB ? (
+          <p>
+            b.
+            {detailB}
+          </p>
+        ) : null}
+        {detailC
+          ? (
+            <p>
+              c.
+              {detailC}
+            </p>
+          ) : null}
+        {detailD
+          ? (
+            <p>
+              d.
+              {detailD}
+            </p>
+          ) : null}
+        {detailE
+          ? (
+            <p>
+              e.
+              {detailE}
+            </p>
+          ) : null}
+      </AccordionPanelContent>
+    </AccordionPanel>
+  );
 }
+
+GameplayInstruction.propTypes = {
+  steps: PropTypes.instanceOf(Object).isRequired,
+
+};
 
 export default GameplayInstruction;

@@ -1,6 +1,7 @@
 import { css } from 'styled-components';
-import media from './media'
+import media from './media';
 import theme from './theme';
+
 const { color, responsive } = theme;
 
 const mixins = {
@@ -26,7 +27,7 @@ const mixins = {
     align-items: center;
   `,
 
-  flexBetween: css `
+  flexBetween: css`
     display: flex;
     justify-content: space-between;
     align-items: center;
